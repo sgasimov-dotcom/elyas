@@ -57,7 +57,7 @@ resource "aws_launch_configuration" "web" {
   image_id        = data.aws_ami.latest_amazon_linux.id
   instance_type   = "t3.micro"
   security_groups = [aws_security_group.web.id]
-  user_data       = file("user_data.sh")
+#   user_data       = file("user_data.sh")
   lifecycle {
     create_before_destroy = true #made for hig availability
   }
@@ -124,15 +124,15 @@ output "elb" {
 
 #-----------------------------------------------------
 
-resource "aws_route53_record" "blog" {
-zone_id = "Z0909795NKPTIPFAGOKO"
-  name    = "blog.sahibgasimov.net"
-  type    = "A"
+# resource "aws_route53_record" "blog" {
+# zone_id = "Z0909795NKPTIPFAGOKO"
+#   name    = "blog.sahibgasimov.net"
+#   type    = "A"
  
 
-  alias {
-    name                   = aws_elb.web.dns_name
-    zone_id                = aws_elb.web.zone_id
-    evaluate_target_health = true
-  }
-}
+#   alias {
+#     name                   = aws_elb.web.dns_name
+#     zone_id                = aws_elb.web.zone_id
+#     evaluate_target_health = true
+#   }
+# }
