@@ -47,7 +47,7 @@ resource "aws_security_group" "web" {
   }
   tags = {
     Name  = "Dynamic SecurityGroup"
-    Owner = "Denis Astahov"
+    Owner = "Sahib Gasimov"
   }
 }
 
