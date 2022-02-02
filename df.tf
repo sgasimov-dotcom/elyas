@@ -5,6 +5,7 @@
 #    - Launch Configuration with Auto AMI Lookup
 #    - Auto Scaling Group using 2 Availability Zones
 #    - Classic Load Balancer in 2 Availability Zones
+#     terraform version used wget https://releases.hashicorp.com/terraform/0.12.1/terraform_0.12.1_linux_amd64.zip
 #
 # Made by Sahib Gasimov 01-August-2021
 #-----------------------------------------------------------
